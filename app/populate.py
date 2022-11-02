@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 # импортируем классы Book и Base из файла database_setup.py
-from database_setup import News, Base
+from database_setup import Base
 
-engine = create_engine('sqlite:///books-collection.db')
+engine = create_engine('sqlite:///news-collection.db')
 # Свяжим engine с метаданными класса Base,
 # чтобы декларативы могли получить доступ через экземпляр DBSession
 Base.metadata.bind = engine

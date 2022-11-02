@@ -19,7 +19,7 @@ redis_host = os.getenv("REDIS_HOST", "localhost")
 redis_client = redis.Redis(host=redis_host, port=6379, db=0)
 
 # Подключаемся и создаем сессию базы данных
-engine = create_engine('sqlite:///books-collection.db?check_same_thread=False')
+engine = create_engine('sqlite:///news-collection.db?check_same_thread=False')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
